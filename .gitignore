@@ -1,0 +1,47 @@
+# byte-compiled Python files
+*.py[co]
+
+# Packages
+*.egg
+*.egg-info
+*~
+.installed.cfg
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+
+# Installer logs
+.plone.versioncheck.tracked.json
+
+# virtual enviroment
+include/
+lib/
+
+# Installer logs
+pip-log.txt
+pip-selfcheck.json
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+
+# local config
+local.cfg
+secret.cfg
+
+# other
+etc/
+.plone.versioncheck.cache/
+
+# sublime project
+*.sublime-workspace
+
+# pyenv
+.python-version
