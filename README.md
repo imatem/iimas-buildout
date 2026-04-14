@@ -62,3 +62,19 @@ export LDFLAGS="-L$(brew --prefix zlib)/lib"
 ```shell
 buildout
 ```
+
+```shell
+bin/zeoserver start
+```
+
+```shell
+bin/zeoclient1 fg
+```
+
+```shell
+bin/zeoclient1 start
+```
+
+```shell
+bin/zeoclient2 start
+```
