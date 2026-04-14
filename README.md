@@ -16,6 +16,13 @@ Add a file that contains a passwort. Do **not** use ``admin`` as a password in p
 echo -e "[buildout]\nlogin = admin\npassword = admin" > secret.cfg
 ```
 
+Add local distributions credentials to ``secret.cfg``
+
+```shell
+inks-login =
+links-password =
+```
+
 Symlink to the file that best fits you local environment. At first that is usually development. Later you can use production or test. This buildout only uses ``local.cfg`` and ignores all ``profiles/local_*.cfg``.
 
 ```shell
