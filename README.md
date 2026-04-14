@@ -29,6 +29,18 @@ Symlink to the file that best fits you local environment. At first that is usual
 ln -s profiles/local_production.cfg local.cfg
 ```
 
+``shell
+apt-get install pyenv
+```
+
+``shell
+apt-get install pyenv-virtualenv
+```
+
+```shell
+pyenv install 3.12.13
+```
+
 setup a virtual environment
 
 ```shell
