@@ -1,4 +1,4 @@
-# The IIMAS Buildout
+# IIMAS Buildout
 
 ## Quickstart
 
@@ -55,7 +55,7 @@ pip install -r requirements.txt
 ```
 
 > [!NOTE]
-> Solo en MaC
+> For Mac users
 > ```shell
 > export LDFLAGS="-L$(brew --prefix zlib)/lib"
 > ```
@@ -65,16 +65,16 @@ buildout
 ```
 
 > [!IMPORTANT]
-> Siempre que tengamos una actualización hay que ejecutar el comando anterior
+> Whenever we have an update, we need to run the previous command.
 
 
-Iniciar Zeoserver
+Start Zeoserver
 
 ```shell
 bin/zeoserver start
 ```
 
-Iniciar clientes
+Start clients
 
 ```shell
 bin/zeoclient1 start
@@ -84,7 +84,7 @@ bin/zeoclient1 start
 bin/zeoclient2 start
 ```
 
-Detener cliente
+Stop clients
 
 ```shell
 bin/zeoclient1 stop
