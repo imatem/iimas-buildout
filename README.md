@@ -54,14 +54,19 @@ pyenv local plone6
 pip install -r requirements.txt
 ```
 
-MaC Users
-```shell
-export LDFLAGS="-L$(brew --prefix zlib)/lib"
-```
+> [!NOTE]
+> Solo en MaC
+> ```shell
+> export LDFLAGS="-L$(brew --prefix zlib)/lib"
+> ```
 
 ```shell
 buildout
 ```
+
+> [!IMPORTANT]
+> Siempre que tengamos una actualización hay que ejecutar el comando anterior
+
 
 Iniciar Zeoserver
 
