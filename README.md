@@ -38,13 +38,13 @@ apt-get install pyenv-virtualenv
 ```
 
 ```shell
-pyenv install 3.12.13
+pyenv install 3.13.13
 ```
 
 setup a virtual environment
 
 ```shell
-pyenv virtualenv 3.12.13 plone6
+pyenv virtualenv 3.13.13 plone6
 pyenv local plone6
 ```
 
@@ -63,13 +63,13 @@ export LDFLAGS="-L$(brew --prefix zlib)/lib"
 buildout
 ```
 
+Iniciar Zeoserver
+
 ```shell
 bin/zeoserver start
 ```
 
-```shell
-bin/zeoclient1 fg
-```
+Iniciar clientes
 
 ```shell
 bin/zeoclient1 start
@@ -77,4 +77,10 @@ bin/zeoclient1 start
 
 ```shell
 bin/zeoclient2 start
+```
+
+Detener cliente
+
+```shell
+bin/zeoclient1 stop
 ```
