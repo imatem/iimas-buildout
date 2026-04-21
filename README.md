@@ -1,6 +1,6 @@
 # IIMAS Buildout
 
-## Quickstart
+## Inicio rápido
 
 ```shell
 git clone https://github.com/imatem/iimas-buildout
@@ -10,13 +10,13 @@ git clone https://github.com/imatem/iimas-buildout
 cd iimas-buildout
 ```
 
-Add a file that contains a passwort. Do **not** use ``admin`` as a password in production!
+Agrega un archivo que contenga una contraseña; **no** uses ``admin`` como contraseña en producción.
 
 ```shell
 echo -e "[buildout]\nlogin = admin\npassword = admin" > secret.cfg
 ```
 
-Add local distributions credentials to ``secret.cfg``
+Agrega las credenciales del índice de paquetes local a ``secret.cfg``
 
 ```shell
 inks-login =
@@ -25,33 +25,22 @@ links-password =
 
 Symlink to the file that best fits you local environment. At first that is usually development. Later you can use production or test. This buildout only uses ``local.cfg`` and ignores all ``profiles/local_*.cfg``.
 
+Crea un enlace simbólico al archivo de configuración de producción. Esta configuración solo utiliza ``local.cfg`` e ignora todos los ``profiles/local_*.cfg``.
+
 ```shell
 ln -s profiles/local_production.cfg local.cfg
 ```
 
+Crea un entorno virtual de Python
+
 ```shell
-apt-get install pyenv
+python -m venv .
 ```
 
-```shell
-apt-get install pyenv-virtualenv
-```
+### Instala Plone
 
 ```shell
-pyenv install 3.13.13
-```
-
-setup a virtual environment
-
-```shell
-pyenv virtualenv 3.13.13 plone6
-pyenv local plone6
-```
-
-### Build Plone
-
-```shell
-pip install -r requirements.txt
+bin/pip install -r requirements.txt
 ```
 
 > [!NOTE]
@@ -61,31 +50,35 @@ pip install -r requirements.txt
 > ```
 
 ```shell
-buildout
+bin/buildout
 ```
 
 > [!IMPORTANT]
-> Whenever we have an update, we need to run the previous command.
+> Cada vez que haya una actualización, ejecuta el comando anterior.
 
 
-Start Zeoserver
+### Inicia Plone
+
+Inicia el servidor ZEO
 
 ```shell
 bin/zeoserver start
 ```
 
-Start clients
+Inicia los clientes de ZEO
 
 ```shell
 bin/zeoclient1 start
 ```
 
-```shell
-bin/zeoclient2 start
-```
-
-Stop clients
+Para detener los clientes, ejecuta el siguiente comando
 
 ```shell
 bin/zeoclient1 stop
+```
+
+Para detener el servidor ZEO, ejecuta el siguiente comando
+
+```shell
+bin/zeoserver stop
 ```
