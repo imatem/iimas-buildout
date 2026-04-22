@@ -19,7 +19,7 @@ echo -e "[buildout]\nlogin = admin\npassword = admin" > secret.cfg
 Agrega las credenciales del índice de paquetes local a ``secret.cfg``
 
 ```shell
-inks-login =
+links-login =
 links-password =
 ```
 
