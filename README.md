@@ -97,3 +97,32 @@ bin/zeoserver stop
 ```
 
 ### Respaldos 💾
+
+Los siguientes archivos deben incluirse en el backup:
+
+- `Data.fs` (archivo de la base de datos)
+- `blobstorage` (directorio de archivos)
+
+
+```
+var/filestorage/Data.fs
+```
+
+```
+var/blobstorage
+```
+
+Para generar un respaldo ejecuta
+
+```
+bin/backup
+```
+
+los respaldos los pondra en el direcotorio `backup`
+
+
+### Recuperar desde un backup ♻️
+
+```
+bin/restore
+```
