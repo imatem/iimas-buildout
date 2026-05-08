@@ -1,29 +1,36 @@
 # IIMAS Buildout
 
-## Inicio rápido
+## Prerrequisitos 📋
+
+- Python 13
+- uv
+
+## Instalación ⚙️
+
+Decarga el proyecto en tu máquina local:
 
 ```shell
 git clone https://github.com/imatem/iimas-buildout
 ```
 
+Entra en el directorio del proyecto
+
 ```shell
 cd iimas-buildout
 ```
 
-Agrega un archivo que contenga una contraseña; **no** uses ``admin`` como contraseña en producción.
+Crea un archivo con la contraseña inicial del administrador; **no** uses ``admin`` como contraseña en producción.
 
 ```shell
 echo -e "[buildout]\nlogin = admin\npassword = admin" > secret.cfg
 ```
 
-Agrega las credenciales del índice de paquetes local a ``secret.cfg``
+Edita el archivo ``secret.cfg`` y agrega las credenciales necesarias para acceder al indice de paquetes locales. Dichas credenciales seran asignadas por el departamento de Informática Académica.
 
 ```shell
 links-login =
 links-password =
 ```
-
-Symlink to the file that best fits you local environment. At first that is usually development. Later you can use production or test. This buildout only uses ``local.cfg`` and ignores all ``profiles/local_*.cfg``.
 
 Crea un enlace simbólico al archivo de configuración de producción. Esta configuración solo utiliza ``local.cfg`` e ignora todos los ``profiles/local_*.cfg``.
 
@@ -31,33 +38,37 @@ Crea un enlace simbólico al archivo de configuración de producción. Esta conf
 ln -s profiles/local_production.cfg local.cfg
 ```
 
-Crea un entorno virtual de Python
+### Entorno virtual de Python 🐍
+
+Crear el entorno virtual con Python 3.13 e instalar `pip` en el entorno
 
 ```shell
-python -m venv .
+uv venv --python 3.13 --seed .venv
 ```
 
-### Instala Plone
+Instala las dependencias base
 
 ```shell
-bin/pip install -r requirements.txt
+.venv/bin/pip install -r requirements.txt
 ```
+
+### Instalación de Plone
 
 > [!NOTE]
-> For Mac users
+> For Mac users if you use brew
 > ```shell
 > export LDFLAGS="-L$(brew --prefix zlib)/lib"
 > ```
 
 ```shell
-bin/buildout
+.venv/bin/buildout
 ```
 
 > [!IMPORTANT]
 > Cada vez que haya una actualización, ejecuta el comando anterior.
 
 
-### Inicia Plone
+### Inicia los servicios ▶️
 
 Inicia el servidor ZEO
 
@@ -71,6 +82,8 @@ Inicia los clientes de ZEO
 bin/zeoclient1 start
 ```
 
+### Detén los servicios ⏹️
+
 Para detener los clientes, ejecuta el siguiente comando
 
 ```shell
@@ -81,4 +94,35 @@ Para detener el servidor ZEO, ejecuta el siguiente comando
 
 ```shell
 bin/zeoserver stop
+```
+
+### Respaldos 💾
+
+Los siguientes archivos deben incluirse en el backup:
+
+- `Data.fs` (archivo de la base de datos)
+- `blobstorage` (directorio de archivos)
+
+
+```
+var/filestorage/Data.fs
+```
+
+```
+var/blobstorage
+```
+
+Para generar un respaldo ejecuta
+
+```
+bin/backup
+```
+
+los respaldos los pondra en el direcotorio `backup`
+
+
+### Recuperar desde un backup ♻️
+
+```
+bin/restore
 ```
