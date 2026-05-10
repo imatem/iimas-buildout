@@ -121,7 +121,7 @@ bin/backup
 los respaldos los pondra en el direcotorio `backup`
 
 
-### Recuperar desde un backup ♻️
+### Recuperar desde un respaldo ♻️
 
 ```
 bin/restore
