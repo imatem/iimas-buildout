@@ -4,6 +4,7 @@
 
 - [uv](https://docs.astral.sh/uv/#installation)
 - Python 13
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 ## Instalación ⚙️
 
