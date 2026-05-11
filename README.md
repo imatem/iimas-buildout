@@ -85,7 +85,7 @@ bin/zeoclient1 start
 
 ### Creación del sitio 🔥
 
-Abre `http://localhost:8080/` en tu navegador para acceder a la página de creación del sitio.
+Abre `http://localhost:8082/` en tu navegador para acceder a la página de creación del sitio.
 
 ### Detén los servicios ⏹️
 
