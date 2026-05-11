@@ -53,7 +53,7 @@ Instala las dependencias base
 .venv/bin/pip install -r requirements.txt
 ```
 
-### Instalación de Plone
+### Instalación de Plone 🔧
 
 > [!NOTE]
 > For Mac users if you use brew
