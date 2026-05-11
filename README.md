@@ -1,9 +1,9 @@
 # IIMAS Buildout
 
-## Prerrequisitos 📋
+## Prerrequisitos ✅
 
+- Python 13 🐍
 - [uv](https://docs.astral.sh/uv/#installation)
-- Python 13
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 ## Instalación ⚙️
@@ -82,6 +82,10 @@ Inicia los clientes de ZEO
 ```shell
 bin/zeoclient1 start
 ```
+
+### Creación del sitio 🔥
+
+Abre `http://localhost:8080/` en tu navegador para acceder a la página de creación del sitio.
 
 ### Detén los servicios ⏹️
 
