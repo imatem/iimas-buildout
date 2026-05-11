@@ -2,8 +2,8 @@
 
 ## Prerrequisitos 📋
 
+- [uv](https://docs.astral.sh/uv/#installation)
 - Python 13
-- uv
 
 ## Instalación ⚙️
 
