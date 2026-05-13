@@ -138,4 +138,5 @@ los respaldos los pondra en el direcotorio `backup`
 bin/restore
 ```
 
+Inicia los servicios.
 ¡Listo! Tu sitio de Plone debería estar funcionando correctamente. 🎉
