@@ -117,6 +117,9 @@ var/filestorage/Data.fs
 var/blobstorage
 ```
 
+> [!TIP]
+> Se recomienda hacer el respaldo cuando no haya peronas usando el sistema.
+
 Para generar un respaldo ejecuta
 
 ```
@@ -128,6 +131,11 @@ los respaldos los pondra en el direcotorio `backup`
 
 ### Recuperar desde un respaldo ♻️
 
+> [!WARNING]  
+> Al tratarse de una recuperación de sistema, el servidor y los clientes deben estar detenidos.
+
 ```
 bin/restore
 ```
+
+¡Listo! Tu sitio de Plone debería estar funcionando correctamente. 🎉
