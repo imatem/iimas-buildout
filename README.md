@@ -118,7 +118,7 @@ var/blobstorage
 ```
 
 > [!TIP]
-> Se recomienda hacer el respaldo cuando no haya peronas usando el sistema.
+> Se recomienda hacer el respaldo cuando no haya personas usando el sistema.
 
 Para generar un respaldo ejecuta
 
