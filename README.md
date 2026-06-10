@@ -103,7 +103,7 @@ bin/zeoserver stop
 
 ### Respaldos 💾
 
-Los siguientes archivos deben incluirse en el backup:
+Al reliazar un respaldo los siguientes archivos deben incluirse en el backup:
 
 - `Data.fs` (archivo de la base de datos)
 - `blobstorage` (directorio de archivos)
@@ -117,10 +117,15 @@ var/filestorage/Data.fs
 var/blobstorage
 ```
 
+> [!NOTE]
+> Puedes realizar una copia de seguridad del archivo `Data.fs` y del directorio `blobstorage` utilizando la
+> herramienta de tu preferencia, o bien usar [collective.recipe.backup](https://pypi.org/project/collective.recipe.backup/5.1.0/)
+
+
 > [!TIP]
 > Se recomienda hacer el respaldo cuando no haya personas usando el sistema.
 
-Para generar un respaldo ejecuta
+Para generar un respaldo:
 
 ```
 bin/backup
@@ -131,7 +136,7 @@ los respaldos los pondra en el direcotorio `backup`
 
 ### Recuperar desde un respaldo ♻️
 
-> [!WARNING]  
+> [!WARNING]
 > Al tratarse de una recuperación de sistema, el servidor y los clientes deben estar detenidos.
 
 ```
