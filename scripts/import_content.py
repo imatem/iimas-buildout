@@ -50,7 +50,7 @@ with api.env.adopt_user(username="admin"):
         new_item = api.content.create(
             container=custom_type_folder,
             type=item_type_name,
-            # replace with your article title
+            # replace with your content title
             title="My Article Item",
             # Custom schema fields passed as keyword arguments:
             article_status="published",
