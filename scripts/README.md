@@ -11,17 +11,20 @@ La siguiente tabla presenta los scripts de ejemplo incluidos en este directorio,
 
 | Script | Descripción |
 |---|---|
-| `import_content.py` | Ejemplo de carga de información de elemntos de CV. |
+| `import_content.py` | Ejemplo de carga de información de contenidos de CV. |
 
 > [!TIP]
->  Se recomienda hacer uso de [plone.api](https://6.docs.plone.org/plone.api/content.html) para creacion de contenido.
+>  Se recomienda hacer uso de [plone.api](https://6.docs.plone.org/plone.api/content.html) para creación de contenido.
+
+> [!TIP]
+> Para la lectura y procesamiento de archivos `.bib`, se recomienda utilizar la biblioteca [bibtexparser](https://bibtexparser.readthedocs.io/en/main/), la cual ya se encuentra instalada.
 
 ## Requisitos previos
 
 Antes de ejecutar los scripts, es necesario verificar que:
 
 - Se encuentren instaladas todas las dependencias requeridas.
-- El servido SEO esta corriendo.
+- El servidor ZEO esta corriendo.
 - Se cuente con los permisos necesarios para realizar las operaciones de carga.
 
 ## Ejecución
@@ -33,9 +36,16 @@ Ejemplo de ejecución:
 bin/zeoclient_debug run scripts/import_content.py
 ```
 
+Los scripts pueden requerir parámetros específicos para su ejecución, los cuales permiten configurar el comportamiento del proceso de carga.
+
+```shell
+bin/zeoclient_debug run scripts/import_content.py /path/to/data.bib
+```
+
 ## Consideraciones
 
-- Revisar el contenido de cada script antes de ejecutarlo.
+- Revisar el contenido de cada script antes de su ejecución.
 - Verificar que la información de entrada esté disponible y cumpla con el formato esperado.
 - Validar los resultados una vez finalizado el proceso de carga.
-- Evitar ejecuciones duplicadas, a menos que el proceso esté diseñado para soportarlas.
+- Evitar ejecuciones duplicadas, salvo que el script esté diseñado para permitirlas.
+
